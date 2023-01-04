@@ -21,20 +21,18 @@
   <div class='nav'>
     <a href='https://github.com/vlang/V/tree/master/examples' class='item'>Examples</a>
     <a href='https://github.com/vlang/v/blob/master/doc/docs.md' class='item'>Documentation</a>
+    <a href='https://github.com/vlang/v/tree/master/tutorials' class='item'>Tutorials</a>
     <a href='https://modules.vlang.io/' class='item'>Stdlib Docs</a>
-
     <a href='https://vpm.vlang.io/' class='item'>vpm</a>
     <a href='https://github.com/vlang/v/discussions' class='item'>Forum</a>
     <a href='https://blog.vlang.io/' class='item'>Blog</a>
     <a href='https://play.vlang.io/' class='item'>Playground</a>
-    <a href='/play' class='item active'>Playground</a>
-
   </div>
   <div class="donate-button">
-    <a target="_blank" href='https://patreon.com/' class='patreon'><img src='/patreon.png' /></a>
-    <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=HRGVJ2LA2LKJ8&item_name=Support+V+development&currency_code=USD&source=url&lc=US" class="paypal">PayPal</a>
-    <a target="_blank" href="https://github.com/sponsors/medvednikov" class="github">GitHub $</a>
-  </div>
+      <a target="_blank" href='https://patreon.com/' class='patreon'><img src='/patreon.png' /></a>
+      <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=HRGVJ2LA2LKJ8&item_name=Support+V+development&currency_code=USD&source=url&lc=US" class="paypal">PayPal</a>
+      <a target="_blank" href="https://github.com/sponsors/medvednikov" class="github">GitHub $</a>
+    </div>
   <div class='flex'></div>
 </div>
 
@@ -50,7 +48,7 @@
     #app { height: 100%; }
   </style>
   <div class='examples select'>
-    <select id='playground_select_49081526'>
+    <select id='playground_select_84973592'>
       <option value="" disabled selected>Load an example</option>
       <option value='hello'>Hello world</option>
       <option value='fib'>Fibonacci</option>
@@ -72,43 +70,43 @@
 
 
 
-<div class='codeblock' id="codeblock_11661748">
+<div class='codeblock' id="codeblock_01145957">
   
   <div class='titlebar separator'>
     <span>V Playground - v0.1.24</span>
     <div class='flex'></div>
-    <a href="/play" class='play-btn' id='codeblock_rb_03872689'><svg class="svg-inline--fa fa-play fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg> Run</a>
+    <a href="/play" class='play-btn' id='codeblock_rb_14124772'><svg class="svg-inline--fa fa-play fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg> Run</a>
   </div>
   
-  <pre><div id="codeblock_hl_69806398"></div><textarea spellCheck="false" id="codeblock_ta_14510986" class=""></textarea></pre>
+  <pre><div id="codeblock_hl_87010835"></div><textarea spellCheck="false" id="codeblock_ta_60110481" class=""></textarea></pre>
 </div>
 
 <script>
 
-function playground_20213257(value) {
-  document.getElementById("codeblock_ta_14510986").value = value
-  tokenize_codeblock_11661748({target:{value}})
+function playground_37491694(value) {
+  document.getElementById("codeblock_ta_60110481").value = value
+  tokenize_codeblock_01145957({target:{value}})
 }
 
-function tokenize_codeblock_11661748 (e) {
+function tokenize_codeblock_01145957 (e) {
   Tokenizer(e.target.value).then(function(tokens) {
-    document.getElementById("codeblock_hl_69806398").innerHTML = tokens
+    document.getElementById("codeblock_hl_87010835").innerHTML = tokens
       .map(function(token) { return `<span class='${token.type}'>${token.value}</span>` })
       .join('')
   })
     
 }
-document.getElementById("codeblock_ta_14510986").oninput = tokenize_codeblock_11661748
-tokenize_codeblock_11661748({target:{value: document.getElementById("codeblock_ta_14510986").value}})
-document.getElementById("codeblock_rb_03872689").onauxclick = function(e) {
-  localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_14510986").value)
+document.getElementById("codeblock_ta_60110481").oninput = tokenize_codeblock_01145957
+tokenize_codeblock_01145957({target:{value: document.getElementById("codeblock_ta_60110481").value}})
+document.getElementById("codeblock_rb_14124772").onauxclick = function(e) {
+  localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_60110481").value)
 }
-document.getElementById("codeblock_rb_03872689").onclick = function(e) {
+document.getElementById("codeblock_rb_14124772").onclick = function(e) {
   if (location.pathname === '/play') e.preventDefault()
-  var codeblock_value = document.getElementById("codeblock_ta_14510986").value
+  var codeblock_value = document.getElementById("codeblock_ta_60110481").value
   localStorage.setItem('sandbox-code', codeblock_value)
   
-  document.getElementById("playground_output_08021433").innerText = 'Waiting for server...'
+  document.getElementById("playground_output_15381689").innerText = 'Waiting for server...'
   fetch("https://play.vlang.io/compile", {
     headers: {
       "content-type":"application/x-www-form-urlencoded; charset=UTF-8"
@@ -118,7 +116,7 @@ document.getElementById("codeblock_rb_03872689").onclick = function(e) {
   })
     .then(function(res) { return res.text() })
     .then(function(res) {
-      document.getElementById("playground_output_08021433").innerText = res.lastIndexOf('==vmft:') > 0 ? res.substr(0, res.lastIndexOf('==vmft:')) : res
+      document.getElementById("playground_output_15381689").innerText = res.lastIndexOf('==vmft:') > 0 ? res.substr(0, res.lastIndexOf('==vmft:')) : res
     })
   
 }
@@ -131,17 +129,17 @@ document.getElementById("codeblock_rb_03872689").onclick = function(e) {
       <div class="titlebar separator">
         <span>Program Output</span>
       </div>
-      <pre><span id="playground_output_08021433"></span></pre>
+      <pre><span id="playground_output_15381689"></span></pre>
     </div>
   </div>
 </div>
 <script>
-playground_20213257(localStorage.getItem('sandbox-code') || "println('Hello World!')")
-document.getElementById('playground_select_49081526').oninput = function(e) {
+playground_37491694(localStorage.getItem('sandbox-code') || "println('Hello World!')")
+document.getElementById('playground_select_84973592').oninput = function(e) {
   fetch(`/examples/${e.target.value}.v`)
     .then(res => res.text())
     .then(res => {
-      playground_20213257(res)
+      playground_37491694(res)
     })
 }
 </script>
