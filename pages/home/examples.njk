@@ -1,0 +1,11 @@
+<div class='examples'>
+      {% include "./veasel.njk" %}
+  {% set code = "fn main() {\
+  areas := ['game', 'web', 'tools', 'science', 'systems',\
+            'embedded', 'drivers', 'GUI', 'mobile'] \
+  for area in areas {\
+    println('Hello, $area developers!')\
+  }\
+}" %}
+  {% include '../components/codeblock.njk' %}
+</div>
