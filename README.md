@@ -25,7 +25,7 @@ There are various way you can contribute to this project. Refactoring writings, 
 
 ### Styling the website
 
-There is `app.sass` file which is the main stylesheet. Use `pindex.html` to view the rendered html file. This will help you style the website.
+There is `app.sass` file which is the main stylesheet. Use `index.html` to view the rendered html file. This will help you style the website.
 
 ### Adding Language
 
