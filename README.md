@@ -18,7 +18,7 @@ npm install --global serve
 npm run build
 ```
 
-*note: You can't run the whole site locally, because of proprietary backend, but you can preview the html file `index.html` for styling css.*
+*note: You can't run the whole site locally, because of proprietary backend, but you can preview the html file `index.html` in ``build`` folder for styling css.*
 
 ## How To Contribute
 
@@ -26,7 +26,7 @@ There are various way you can contribute to this project. Refactoring writings, 
 
 ### Styling the website
 
-There is `app.sass` file which is the main stylesheet. Use `index.html` to view the rendered html file. This will help you style the website.
+There is `app.sass` file which is the main stylesheet. Use `index.html` in ``build`` folder to view the rendered html file. This will help you style the website.
 
 ### Adding Language
 
