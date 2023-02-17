@@ -87,6 +87,8 @@ async function compile() {
 
     console.log('Copying res')
     ncp('./res', './build')
+
+    console.log('Serving page on localhost:3000 via serve')
 }
 
 compile()
