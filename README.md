@@ -8,7 +8,8 @@ https://vlang.io
 The website is built via Nunjucks templates. By using ``npm run build`` the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**.
 
 If you only want to build pages and not run them via ``serve`` then delete ``&& serve build/`` from line 23 of ``package.json``.
-Usage:
+
+To build:
 ```
 git clone https://github.com/vlang/vlang.io
 cd vlang.io
