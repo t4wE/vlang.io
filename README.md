@@ -3,7 +3,7 @@
 https://vlang.io
 
 ![Example](example.png)\
-[The original version](https://github.com/hex2f/vlang.io) was written by [leahlundqvist](https://github.com/hex2f) aka ``hes2f``.
+[The original version](https://github.com/hex2f/vlang.io) was written by [leahlundqvist](https://github.com/hex2f) aka ``hex2f``.
 
 The website is built via Nunjucks templates. By using ``npm run build`` the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**.
 
@@ -23,7 +23,7 @@ npm run build
 
 ## How To Contribute
 
-There are various way you can contribute to this project. Refactoring writings, updating css, adding Language support etc. We will cover them one by one.
+There are various way you can contribute to this project. Refactoring writings, updating css, adding language support etc. We will cover them one by one.
 
 ### Styling the website
 
