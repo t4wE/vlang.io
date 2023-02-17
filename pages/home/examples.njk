@@ -1,21 +1,21 @@
 <div class="examples">
-<div style="width: 100%; overflow-x: hidden; margin-bottom: -34px;">
-<a target="_blank" href="https://my-store-7564322.creator-spring.com/">
-<img style="width: 200px; margin:0; padding: 0; float: right; right: -20px; z-index: 2; position: relative" src="/veasel.png">
-</a>
-</div>
-<div class="codeblock" id="codeblock_99404097">
-<div class="titlebar separator">
-<div class="flex"></div>
-</div>
-<pre class="hello_devs" id="ex1">fn main() {
+    <div style="width: 100%; overflow-x: hidden; margin-bottom: -34px;">
+        <a target="_blank" href="https://my-store-7564322.creator-spring.com/">
+            <img style="width: 200px; margin:0; padding: 0; float: right; right: -20px; z-index: 2; position: relative" src="/veasel.png">
+        </a>
+    </div>
+    <div class="codeblock" id="codeblock_99404097">
+        <div class="titlebar separator">
+            <div class="flex"></div>
+        </div>
+        <pre class="hello_devs" id="ex1">fn main() {
     areas := ['game', 'web', 'tools', 'science', 'systems',
               'embedded', 'drivers', 'GUI', 'mobile']
     for area in areas {
         println('Hello, $area developers!')
     }
 }</pre>
-<pre class="hello_devs" id="ex2" style="display:none">// Print file lines that start with "DEBUG:"
+        <pre class="hello_devs" id="ex2" style="display:none">// Print file lines that start with "DEBUG:"
 import os
 
 // `read_file` returns an optional (`?string`), it must be checked
@@ -33,7 +33,7 @@ for line in lines {
     }
 }
 </pre>
-<pre class="hello_devs" id="ex3" style="display:none">import time
+        <pre class="hello_devs" id="ex3" style="display:none">import time
 import net.http
 resp := http.get('https://vlang.io/utc_now') or {
     println('failed to fetch data from the server')
@@ -42,7 +42,7 @@ resp := http.get('https://vlang.io/utc_now') or {
 t := time.unix(resp.text.int())
 println(t.format()) // 2019-08-16 17:48
 </pre>
-<pre class="hello_devs" id="ex4" style="display:none">import json
+        <pre class="hello_devs" id="ex4" style="display:none">import json
 
 struct User {
     name string
@@ -85,79 +85,77 @@ fn (mut u User) register() {
 }
 
   </pre>
-</div>
-<select id="select" onchange="change_ex()" style="margin-top:5px">
-<option value="1">Hello world</option>
-<option value="2">Filter log file</option>
-<option value="3">HTTP + time</option>
-<option value="4">JSON encoding/decoding</option>
-</select>
-<script>
+    </div>
+    <select id="select" onchange="change_ex()" style="margin-top:5px">
+        <option value="1">Hello world</option>
+        <option value="2">Filter log file</option>
+        <option value="3">HTTP + time</option>
+        <option value="4">JSON encoding/decoding</option>
+    </select>
+    <script>
+    var ex_id = 1;
+    const nr_exs = 5;
 
-var ex_id = 1;
-const nr_exs = 5;
-
-function prev() {
-ex_id--;
-if (ex_id < 1) ex_id = nr_exs;
-update_ex()
-}
-
-function next() {
-
-ex_id++;
-if (ex_id > nr_exs) ex_id = 1;
-update_ex()
-}
-
-function update_ex() {
-var elems = document.querySelectorAll('.hello_devs');
-    for (var index = 0 ; index < elems.length; index++) {
-
-        elems[index].style.display = 'none';
+    function prev() {
+        ex_id--;
+        if (ex_id < 1) ex_id = nr_exs;
+        update_ex()
     }
-document.getElementById('ex' + ex_id).style.display = 'table-cell';
-if (ex_id <= 3) {
-document.getElementById('ex' + ex_id).style.fontSize = '100%';
-}
-else {
-document.getElementById('ex' + ex_id).style.fontSize = '80%';
-}
+
+    function next() {
+
+        ex_id++;
+        if (ex_id > nr_exs) ex_id = 1;
+        update_ex()
+    }
+
+    function update_ex() {
+        var elems = document.querySelectorAll('.hello_devs');
+        for (var index = 0; index < elems.length; index++) {
+
+            elems[index].style.display = 'none';
+        }
+        document.getElementById('ex' + ex_id).style.display = 'table-cell';
+        if (ex_id <= 3) {
+            document.getElementById('ex' + ex_id).style.fontSize = '100%';
+        } else {
+            document.getElementById('ex' + ex_id).style.fontSize = '80%';
+        }
 
 
-var select = document.getElementById("select") ;
-select.value = ex_id;
+        var select = document.getElementById("select");
+        select.value = ex_id;
 
-getAjax('/next')
-
-
-}
-
-function change_ex() {
-var select = document.getElementById("select") ;
-ex_id = select.value - 1;
-
-next();
-
-}
+        getAjax('/next')
 
 
-function tokenize_codeblock_99404097 (e) {
-  Tokenizer(e.target.value).then(function(tokens) {
-    document.getElementById("codeblock_hl_04227451").innerHTML = tokens
-      .map(function(token) { return `<span class='${token.type}'>${token.value}</span>` })
-      .join('')
-  })
-}
-document.getElementById("codeblock_ta_39322469").oninput = tokenize_codeblock_99404097
-tokenize_codeblock_99404097({target:{value: document.getElementById("codeblock_ta_39322469").value}})
-document.getElementById("codeblock_rb_13318017").onauxclick = function(e) {
-  localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_39322469").value)
-}
-document.getElementById("codeblock_rb_13318017").onclick = function(e) {
-  if (location.pathname === 'https://v-wasm.vercel.app') e.preventDefault()
-  var codeblock_value = document.getElementById("codeblock_ta_39322469").value
-  localStorage.setItem('sandbox-code', codeblock_value)
-}
-</script>
+    }
+
+    function change_ex() {
+        var select = document.getElementById("select");
+        ex_id = select.value - 1;
+
+        next();
+
+    }
+
+
+    function tokenize_codeblock_99404097(e) {
+        Tokenizer(e.target.value).then(function(tokens) {
+            document.getElementById("codeblock_hl_04227451").innerHTML = tokens
+                .map(function(token) { return `<span class='${token.type}'>${token.value}</span>` })
+                .join('')
+        })
+    }
+    document.getElementById("codeblock_ta_39322469").oninput = tokenize_codeblock_99404097
+    tokenize_codeblock_99404097({ target: { value: document.getElementById("codeblock_ta_39322469").value } })
+    document.getElementById("codeblock_rb_13318017").onauxclick = function(e) {
+        localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_39322469").value)
+    }
+    document.getElementById("codeblock_rb_13318017").onclick = function(e) {
+        if (location.pathname === 'https://v-wasm.vercel.app') e.preventDefault()
+        var codeblock_value = document.getElementById("codeblock_ta_39322469").value
+        localStorage.setItem('sandbox-code', codeblock_value)
+    }
+    </script>
 </div>
