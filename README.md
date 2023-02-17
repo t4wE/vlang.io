@@ -1,8 +1,10 @@
 # The V Programming Language Website
 https://vlang.io
 ![Example](example.png)\
-[The original](https://github.com/hex2f/vlang.io) version was written by [leahlundqvist](https://github.com/hex2f) aka ``hes2f``.
-The website is build via Nunjucks templates. With ``npm run build``the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**\
+[The original version](https://github.com/hex2f/vlang.io) was written by [leahlundqvist](https://github.com/hex2f) aka ``hes2f``.
+
+The website is built via Nunjucks templates. With ``npm run build``the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**\
+
 If you only want to build pages and not run them via ``serve`` then delete ``&& serve build/`` from line 23 of ``package.json``.
 Usage:
 ```
@@ -25,4 +27,4 @@ There is `app.sass` file which is the main stylesheet. Use `pindex.html` to view
 
 ### Adding Language
 
-Use the `english.tr` as a reference to add your translation to this project.
+Use the `english.tr` in the ``translations`` folder as a reference to add your translation to this project.
