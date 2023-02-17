@@ -13,6 +13,7 @@ Usage:
 git clone https://github.com/vlang/vlang.io
 cd vlang.io
 npm install
+npm audit fix
 npm install --global serve
 npm run build
 ```
