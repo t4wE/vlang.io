@@ -1,9 +1,11 @@
 # The V Programming Language Website
+
 https://vlang.io
+
 ![Example](example.png)\
 [The original version](https://github.com/hex2f/vlang.io) was written by [leahlundqvist](https://github.com/hex2f) aka ``hes2f``.
 
-The website is built via Nunjucks templates. With ``npm run build``the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**\
+The website is built via Nunjucks templates. By using ``npm run build`` the ``build-pages.js`` script creates pages from njk files (templates), converts sass to css and runs the page on ``localhost:3000`` via **serve**.
 
 If you only want to build pages and not run them via ``serve`` then delete ``&& serve build/`` from line 23 of ``package.json``.
 Usage:
