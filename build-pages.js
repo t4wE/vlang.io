@@ -15,16 +15,17 @@ const ncp = promisify(NCP.ncp)
 
 const pages = [
     'index',
-    'play',
+    'compare'
+    /*'play',
     'docs',
     'modules',
     'editors',
-    'faq',
-    'compare'
+    'faq'*/
+    
 ]
 
 async function compile() {
-    console.log('Building docs')
+   /* console.log('Building docs')
 
     console.log('Setting up MD parser')
     var md = require('markdown-it')({})
@@ -41,7 +42,7 @@ async function compile() {
     }
 
     console.log('Fetching MD from github')
-    let docsMD = await fetch('https://raw.githubusercontent.com/memeone/v/memeone-patch-docs/doc/docs.md')
+    let docsMD = await fetch('https://raw.githubusercontent.com/vlang/v/master/doc/docs.md')
 
     console.log('Building NJK from MD')
     docsMD = await docsMD.text()
@@ -52,7 +53,7 @@ async function compile() {
     let toc = mdtoc(docsMD, { slugify: require('uslug') }).content
     console.log('Building NJK from MD TOC')
     toc = md.render(toc)
-    await writeFile('./pages/docs/toc.njk', toc)
+    await writeFile('./pages/docs/toc.njk', toc) */
 
     console.log('Fetching lastest release')
     let release = await fetch('https://api.github.com/repos/vlang/v/releases/latest')
@@ -68,8 +69,10 @@ async function compile() {
 
     console.log('Building pages')
     let buildDir = "./build"
-    await rmdir(buildDir, { recursive: true })
-    await mkdir(buildDir, { recursive: true })
+    await fs.rmSync(buildDir, { recursive: true, force: true });
+      console.log('Deleting old build folder if exists')
+    await fs.promises.mkdir(buildDir, { recursive: true })
+      console.log('Creating new build folder')
     await Promise.all(
         pages.map(page =>
             writeFile(
@@ -77,6 +80,7 @@ async function compile() {
                 nunjucks.render(path.join("./pages", page + ".njk")),
                 err => err && console.error(err)
             )
+
         )
     )
 
@@ -88,7 +92,7 @@ async function compile() {
     console.log('Copying res')
     ncp('./res', './build')
 
-    console.log('Serving page on localhost:3000 via serve')
+ console.log('Serving page on localhost:3000 via serve cause of "& serve build/" from line 23 of package.json')
 }
 
 compile()

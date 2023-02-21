@@ -1,7 +1,7 @@
 {%- macro random_int(len) -%}
-  {%- for _ in range(len) -%}
-    {{ range(10) | random }}
-  {%- endfor -%}
+{%- for _ in range(len) -%}
+{{ range(10) | random }}
+{%- endfor -%}
 {%- endmacro -%}
 
 {% set cbid = "codeblock_" + random_int(8) %}
