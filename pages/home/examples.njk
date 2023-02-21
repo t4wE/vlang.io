@@ -12,7 +12,7 @@
     areas := ['game', 'web', 'tools', 'science', 'systems',
               'embedded', 'drivers', 'GUI', 'mobile']
     for area in areas {
-        println('Hello, $area developers!')
+        println('Hello, ${area} developers!')
     }
 }</pre>
         <pre class="hello_devs" id="ex2" style="display:none">// Print file lines that start with "DEBUG:"
@@ -22,7 +22,7 @@ import os
 text := os.read_file('app.log') or {
     // `err` is a special variable that contains the error
     // in `or {}` blocks
-    eprintln('failed to read the file: $err')
+    eprintln('failed to read the file: ${err}')
     return
 }
 
@@ -62,9 +62,9 @@ fn main() {
     }
     println('')
     for i, mut user in users {
-        println('$i) $user.name')
+        println('${i}) ${user.name}')
         if !user.can_register() {
-            println('Cannot register $user.name, they are too young')
+            println('Cannot register ${user.name}, they are too young')
             continue
         }
         // `user` is declared as `mut` in the for loop,

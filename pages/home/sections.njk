@@ -15,7 +15,7 @@
             </p>
             <p>
                 V is very similar to Go. If you know Go, you already know ≈80% of V.
-                Things V improves on Go: <a target="_blank" href="https://vlang.io/compare#go">vlang.io/compare#go</a>.
+                Things V improves on Go: <a target="_blank" href="/compare#go">vlang.io/compare#go</a>.
             </p>
         </div>
         <div class="block">
@@ -471,7 +471,7 @@ fn main() {
   nr_customers := sql db {
     select count from Customer
   }
-  println('number of all customers: $nr_customers')
+  println('number of all customers: ${nr_customers}')
 
   // V syntax can be used to build queries
   uk_customers := sql db {
@@ -479,7 +479,7 @@ fn main() {
   }
 
   for customer in uk_customers {
-    println('$customer.id - $customer.name')
+    println('${customer.id} - ${customer.name}')
   }
 
   // by adding `limit 1` we tell V that there will be
@@ -512,7 +512,7 @@ fn main() {
   nr_customers := sql db {
     select count from Customer
   }
-  println('number of all customers: $nr_customers')
+  println('number of all customers: ${nr_customers}')
 
   // V syntax can be used to build queries
   uk_customers := sql db {
@@ -520,7 +520,7 @@ fn main() {
   }
 
   for customer in uk_customers {
-    println('$customer.id - $customer.name')
+    println('${customer.id} - ${customer.name}')
   }
 
   // by adding `limit 1` we tell V that there will be
