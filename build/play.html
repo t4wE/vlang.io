@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="app.css" rel="stylesheet">
-  <link rel="shortcut icon" href="/v-logo.png">
+  <link rel="shortcut icon" href="/media/v-logo.png">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,100,200,500,700|Roboto+Mono:400,300,100,200,500" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,100,200,500,700|Roboto+Mono:400,300,100,200,500"></noscript>
   <script src="tokenizer.js"></script>
   <title>The V Playground</title>
@@ -16,7 +16,7 @@
 <div id='app'>
 <div class='header'>
   <div class='flex'></div>
-  <a href='/'><img src='/v-logo.png' class='logo' /></a>
+  <a href='/'><img src='/media/v-logo.png' class='logo' /></a>
 
   <div class='nav'>
     <a href='https://github.com/vlang/V/tree/master/examples' class='item'>Examples</a>
@@ -29,7 +29,7 @@
     <a href='https://play.vlang.io/' class='item'>Playground</a>
   </div>
   <div class="donate-button">
-      <a target="_blank" href='https://patreon.com/' class='patreon'><img src='/patreon.png' /></a>
+      <a target="_blank" href='https://patreon.com/' class='patreon'><img src='/media/patreon.png' /></a>
       <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=HRGVJ2LA2LKJ8&item_name=Support+V+development&currency_code=USD&source=url&lc=US" class="paypal">PayPal</a>
       <a target="_blank" href="https://github.com/sponsors/medvednikov" class="github">GitHub $</a>
     </div>
@@ -48,7 +48,7 @@
     #app { height: 100%; }
   </style>
   <div class='examples select'>
-    <select id='playground_select_52591425'>
+    <select id='playground_select_54244353'>
       <option value="" disabled selected>Load an example</option>
       <option value='hello'>Hello world</option>
       <option value='fib'>Fibonacci</option>
@@ -70,43 +70,43 @@
 
 
 
-<div class='codeblock' id="codeblock_33954015">
+<div class='codeblock' id="codeblock_59307091">
   
   <div class='titlebar separator'>
     <span>V Playground - v0.1.24</span>
     <div class='flex'></div>
-    <a href="/play" class='play-btn' id='codeblock_rb_31697176'><svg class="svg-inline--fa fa-play fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg> Run</a>
+    <a href="/play" class='play-btn' id='codeblock_rb_43434417'><svg class="svg-inline--fa fa-play fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg> Run</a>
   </div>
   
-  <pre><div id="codeblock_hl_04333740"></div><textarea spellCheck="false" id="codeblock_ta_44813676" class=""></textarea></pre>
+  <pre><div id="codeblock_hl_02079068"></div><textarea spellCheck="false" id="codeblock_ta_05484855" class=""></textarea></pre>
 </div>
 
 <script>
 
-function playground_76356848(value) {
-  document.getElementById("codeblock_ta_44813676").value = value
-  tokenize_codeblock_33954015({target:{value}})
+function playground_53098894(value) {
+  document.getElementById("codeblock_ta_05484855").value = value
+  tokenize_codeblock_59307091({target:{value}})
 }
 
-function tokenize_codeblock_33954015 (e) {
+function tokenize_codeblock_59307091 (e) {
   Tokenizer(e.target.value).then(function(tokens) {
-    document.getElementById("codeblock_hl_04333740").innerHTML = tokens
+    document.getElementById("codeblock_hl_02079068").innerHTML = tokens
       .map(function(token) { return `<span class='${token.type}'>${token.value}</span>` })
       .join('')
   })
     
 }
-document.getElementById("codeblock_ta_44813676").oninput = tokenize_codeblock_33954015
-tokenize_codeblock_33954015({target:{value: document.getElementById("codeblock_ta_44813676").value}})
-document.getElementById("codeblock_rb_31697176").onauxclick = function(e) {
-  localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_44813676").value)
+document.getElementById("codeblock_ta_05484855").oninput = tokenize_codeblock_59307091
+tokenize_codeblock_59307091({target:{value: document.getElementById("codeblock_ta_05484855").value}})
+document.getElementById("codeblock_rb_43434417").onauxclick = function(e) {
+  localStorage.setItem('sandbox-code', document.getElementById("codeblock_ta_05484855").value)
 }
-document.getElementById("codeblock_rb_31697176").onclick = function(e) {
+document.getElementById("codeblock_rb_43434417").onclick = function(e) {
   if (location.pathname === '/play') e.preventDefault()
-  var codeblock_value = document.getElementById("codeblock_ta_44813676").value
+  var codeblock_value = document.getElementById("codeblock_ta_05484855").value
   localStorage.setItem('sandbox-code', codeblock_value)
   
-  document.getElementById("playground_output_39276079").innerText = 'Waiting for server...'
+  document.getElementById("playground_output_46970236").innerText = 'Waiting for server...'
   fetch("https://play.vlang.io/compile", {
     headers: {
       "content-type":"application/x-www-form-urlencoded; charset=UTF-8"
@@ -116,7 +116,7 @@ document.getElementById("codeblock_rb_31697176").onclick = function(e) {
   })
     .then(function(res) { return res.text() })
     .then(function(res) {
-      document.getElementById("playground_output_39276079").innerText = res.lastIndexOf('==vmft:') > 0 ? res.substr(0, res.lastIndexOf('==vmft:')) : res
+      document.getElementById("playground_output_46970236").innerText = res.lastIndexOf('==vmft:') > 0 ? res.substr(0, res.lastIndexOf('==vmft:')) : res
     })
   
 }
@@ -129,17 +129,17 @@ document.getElementById("codeblock_rb_31697176").onclick = function(e) {
       <div class="titlebar separator">
         <span>Program Output</span>
       </div>
-      <pre><span id="playground_output_39276079"></span></pre>
+      <pre><span id="playground_output_46970236"></span></pre>
     </div>
   </div>
 </div>
 <script>
-playground_76356848(localStorage.getItem('sandbox-code') || "println('Hello World!')")
-document.getElementById('playground_select_52591425').oninput = function(e) {
+playground_53098894(localStorage.getItem('sandbox-code') || "println('Hello World!')")
+document.getElementById('playground_select_54244353').oninput = function(e) {
   fetch(`/examples/${e.target.value}.v`)
     .then(res => res.text())
     .then(res => {
-      playground_76356848(res)
+      playground_53098894(res)
     })
 }
 </script>
