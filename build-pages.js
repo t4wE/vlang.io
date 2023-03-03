@@ -24,7 +24,7 @@ const pages = [
 
 ]
 
-async function compile() {
+async function compile() { //this is supposed to build docs but it doesnt work at line 79
     /*console.log('Building docs')
 
     console.log('Setting up MD parser')
